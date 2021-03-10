@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - ChangeToken
   - PlayerBullet
+  - KillFloor
   layers:
   - Default
   - TransparentFX
