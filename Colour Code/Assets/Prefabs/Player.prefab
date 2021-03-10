@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6190506902314480612}
-  m_Layer: 0
+  - component: {fileID: 1420368927}
+  - component: {fileID: 1420368925}
+  m_Layer: 3
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -30,6 +32,35 @@ Transform:
   m_Father: {fileID: 6190506903928917680}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1420368927
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6190506902314480613}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2
+--- !u!114 &1420368925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6190506902314480613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af41854b0aecf334aa1a28d117238241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObj: {fileID: 6190506903928917694}
 --- !u!1 &6190506903928917694
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +74,7 @@ GameObject:
   - component: {fileID: 6190506903928917682}
   - component: {fileID: 6190506903928917683}
   - component: {fileID: 6190506903928917685}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -182,3 +213,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   playerColour: 3
+  bluePlayerBullet: {fileID: 535749345723415172, guid: edddbf1d0c9e8fa45b13d2aaf09f675d, type: 3}
+  redPlayerBullet: {fileID: 535749345723415172, guid: be09b169b6e8d274792d441d64873f0a, type: 3}
+  yellowPlayerBullet: {fileID: 535749345723415172, guid: 244a999cdaa9b8048949eaec9d2e273b, type: 3}
+  shootSpeed: 15
