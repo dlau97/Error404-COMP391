@@ -11,10 +11,17 @@ public class PlayerController : MonoBehaviour
 	public Transform groundCheck;
 	public LayerMask groundLayer;
 	public Colour playerColour = Colour.neutral;
+	public GameObject bluePlayerBullet, redPlayerBullet, yellowPlayerBullet;
+	public float shootSpeed = 10f;
 	private bool canJump = true;
+	private bool canShoot = true;
 	private Rigidbody2D playerRB;
 	private Transform playerT;
 	private SpriteRenderer playerSR;
+	private int direction = 1; //Direction 1 = right, -1 = left;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +31,17 @@ public class PlayerController : MonoBehaviour
 		playerSR = this.gameObject.GetComponent<SpriteRenderer> ();
  		playerColour = Colour.neutral;
 		this.gameObject.layer = 3; //white
+		direction = 1; //Start facing right
 	}
 
     // Update is called once per frame
     void Update()
     {
+		checkDirection();
 		checkMovement ();
 		checkJump();
 		checkRotation();
+		checkShooting();
     }
 
 	public string getColour(){
@@ -54,6 +64,14 @@ public class PlayerController : MonoBehaviour
 		Vector3 movement = new Vector3 (horizontalMovement, 0f, 0f) * Time.deltaTime;
 		this.transform.Translate(movement, Space.World);
 		this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0);
+	}
+	void checkDirection(){
+		if(Input.GetKeyDown(KeyCode.A)){
+			direction  = -1;
+		}
+		else if (Input.GetKeyDown(KeyCode.D)){
+			direction = 1;
+		}
 	}
 
 	void checkRotation(){
@@ -105,6 +123,32 @@ public class PlayerController : MonoBehaviour
 				this.gameObject.layer = 6; 
 				GameObject.Find("GroundCheck").layer = 6;
 				break;
+		}
+	}
+
+	void checkShooting(){
+		if(canShoot == true && Input.GetKeyDown(KeyCode.Return)){
+			switch(playerColour){
+				case Colour.blue:
+					GameObject bullet = Instantiate(bluePlayerBullet, new Vector3 (playerT.position.x + (1f*direction), playerT.position.y, 0), Quaternion.identity);
+					Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
+					bulletRB.AddForce(new Vector2(shootSpeed*direction,0), ForceMode2D.Impulse);
+					break;
+				case Colour.red:
+					GameObject bullet2 = Instantiate(redPlayerBullet, new Vector3 (playerT.position.x + (1f*direction), playerT.position.y, 0), Quaternion.identity);
+					Rigidbody2D bulletRB2 = bullet2.GetComponent<Rigidbody2D>();
+					bulletRB2.AddForce(new Vector2(shootSpeed*direction,0), ForceMode2D.Impulse);
+					break;
+				case Colour.yellow:
+					GameObject bullet3 = Instantiate(yellowPlayerBullet, new Vector3 (playerT.position.x + (1f*direction), playerT.position.y, 0), Quaternion.identity);
+					Rigidbody2D bulletRB3 = bullet3.GetComponent<Rigidbody2D>();
+					bulletRB3.AddForce(new Vector2(shootSpeed*direction,0), ForceMode2D.Impulse);
+					break;
+				case Colour.neutral:	
+				default:
+					Debug.Log("You should not be default colour while shooting - you should never see this message");
+					break;
+		}
 		}
 	}
 }

@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 36935718}
+  - component: {fileID: 36935719}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -151,8 +152,46 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &36935719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36935717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec515c98873bca49be457f94dfdfcf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeIntensity: 0.5
+  decreaseFactor:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  cameraTransform: {fileID: 519420032}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &626364745 stripped
 Transform:
@@ -258,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4524437361482008094, guid: 554524aff099a85439341dd0a9e0b005, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4524437361482008094, guid: 554524aff099a85439341dd0a9e0b005, type: 3}
       propertyPath: m_LocalPosition.x
@@ -311,7 +350,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6911053100266209361, guid: ba70f3d4a6c213b449ea62dcf6640f40, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6911053100266209361, guid: ba70f3d4a6c213b449ea62dcf6640f40, type: 3}
       propertyPath: m_LocalScale.x
@@ -482,7 +521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8321361605065437531, guid: f0caf109a15f60f43bf05b1f1a0867f6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8321361605065437531, guid: f0caf109a15f60f43bf05b1f1a0867f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -574,7 +613,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8479574481094759333, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8479574481094759333, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -772,6 +811,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6190506903928917685, guid: 1a4f60f16a3e84c49a5b4882598c9977, type: 3}
+      propertyPath: shootSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190506903928917685, guid: 1a4f60f16a3e84c49a5b4882598c9977, type: 3}
+      propertyPath: redPlayerBullet
+      value: 
+      objectReference: {fileID: 535749345723415172, guid: be09b169b6e8d274792d441d64873f0a, type: 3}
+    - target: {fileID: 6190506903928917685, guid: 1a4f60f16a3e84c49a5b4882598c9977, type: 3}
+      propertyPath: bluePlayerBullet
+      value: 
+      objectReference: {fileID: 535749345723415172, guid: edddbf1d0c9e8fa45b13d2aaf09f675d, type: 3}
+    - target: {fileID: 6190506903928917685, guid: 1a4f60f16a3e84c49a5b4882598c9977, type: 3}
+      propertyPath: yellowPlayerBullet
+      value: 
+      objectReference: {fileID: 535749345723415172, guid: 244a999cdaa9b8048949eaec9d2e273b, type: 3}
     - target: {fileID: 6190506903928917694, guid: 1a4f60f16a3e84c49a5b4882598c9977, type: 3}
       propertyPath: m_Name
       value: Player
