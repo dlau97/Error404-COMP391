@@ -15,13 +15,13 @@ public class PlayerBulletController : MonoBehaviour
         bulletRB = this.gameObject.GetComponent<Rigidbody2D>();
         switch(bulletColour){
                 case Colour.blue:
-                    this.gameObject.layer = 7; //blue
+                    this.gameObject.layer = 14; //blue
                     break;
                 case Colour.red:
-                    this.gameObject.layer = 8; //red
+                    this.gameObject.layer = 15; //red
                     break;
                 case Colour.yellow:
-                    this.gameObject.layer = 9; //yellow
+                    this.gameObject.layer = 16; //yellow
                     break;
             }
 
