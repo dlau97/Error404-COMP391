@@ -151,4 +151,10 @@ public class PlayerController : MonoBehaviour
 		}
 		}
 	}
+
+	public void RespawnPlayer(){
+		Vector3 checkpointPos = GameObject.Find("GameController").GetComponent<RespawnController>().getCheckpointPos();
+		playerRB.velocity = Vector2.zero;
+		playerT.position = checkpointPos;
+	}
 }
