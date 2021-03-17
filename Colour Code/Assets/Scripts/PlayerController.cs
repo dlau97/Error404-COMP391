@@ -120,9 +120,10 @@ public class PlayerController : MonoBehaviour
 				break;
 			default:
 				Debug.Log("Incorrect colour option - This should never appear.");
+				playerSR.color = new Color(1f, 1f, 1f, 1f); //White
 				playerColour = Colour.neutral;
-				this.gameObject.layer = 6; 
-				GameObject.Find("GroundCheck").layer = 6;
+				this.gameObject.layer = 3; 
+				GameObject.Find("GroundCheck").layer = 3;
 				break;
 		}
 	}
@@ -155,7 +156,21 @@ public class PlayerController : MonoBehaviour
 
 	public void RespawnPlayer(){
 		Vector3 checkpointPos = GameObject.Find("GameController").GetComponent<RespawnController>().getCheckpointPos();
+		string lastColour = GameObject.Find("GameController").GetComponent<RespawnController>().getLastColour();
+
+		ChangeColour(lastColour);
+
 		playerRB.velocity = Vector2.zero;
 		playerT.position = checkpointPos;
+
+		playerT.localScale = new Vector3(1,1,1);
+
+		GameObject [] allChangeTokens  = GameObject.FindGameObjectsWithTag("ChangeToken");
+
+		foreach(GameObject token in allChangeTokens){
+			token.SendMessage("ResetToken");
+		}
+
+
 	}
 }

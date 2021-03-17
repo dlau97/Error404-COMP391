@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9009867371595745720}
   m_Layer: 0
   m_Name: RedToken
-  m_TagString: Untagged
+  m_TagString: ChangeToken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

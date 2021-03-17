@@ -11,6 +11,10 @@ public class ColourTokenController : MonoBehaviour
     public float rotationSpeed;
     public Material blueMat, redMat, yellowMat;
 
+    private Colour initialColour;
+
+    private Material intialMaterial;
+
     private float delayTokenChangeTime = 1.5f;
 
     bool colourChangeEnabled = true;
@@ -24,6 +28,8 @@ public class ColourTokenController : MonoBehaviour
         tokenT = this.gameObject.GetComponent<Transform>();
         startTime = Time.time;
         colourChangeEnabled = true;
+        initialColour = tokenColour;
+        intialMaterial = this.gameObject.GetComponent<MeshRenderer> ().material;
     }
 
     // Update is called once per frame
@@ -33,6 +39,26 @@ public class ColourTokenController : MonoBehaviour
         if(Time.time >= startTime + delayTokenChangeTime){
             colourChangeEnabled = true;
         }
+    }
+
+    public void ResetToken(){
+        switch(initialColour){
+			case Colour.blue:
+                this.gameObject.GetComponent<MeshRenderer> ().material = blueMat;
+                tokenColour = Colour.blue;
+				break;
+			case Colour.red:
+                this.gameObject.GetComponent<MeshRenderer> ().material = redMat;
+                tokenColour = Colour.red;
+				break;
+			case Colour.yellow:
+                this.gameObject.GetComponent<MeshRenderer> ().material = yellowMat;
+                tokenColour = Colour.yellow;
+				break;
+			default:
+				Debug.Log("Incorrect colour option");
+				break;
+		}
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
