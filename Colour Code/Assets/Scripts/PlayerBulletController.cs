@@ -9,6 +9,8 @@ public class PlayerBulletController : MonoBehaviour
 
     private Rigidbody2D bulletRB;
 
+    private float startTime; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,14 +26,16 @@ public class PlayerBulletController : MonoBehaviour
                     this.gameObject.layer = 9; //yellow
                     break;
             }
-
+        startTime = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
         this.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
-
+        if(Time.time >= startTime + 10f){
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
