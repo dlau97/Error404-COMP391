@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8926189408010507752}
   - component: {fileID: 8926189408010507753}
   - component: {fileID: 8926189408010507754}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: YellowToken
   m_TagString: Untagged
   m_Icon: {fileID: 0}

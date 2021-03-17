@@ -624,6 +624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueToken
       objectReference: {fileID: 0}
+    - target: {fileID: 1008537278575821869, guid: 2bb07b3dad47a1d4eb3ab39293b0bb05, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1008537278575821872, guid: 2bb07b3dad47a1d4eb3ab39293b0bb05, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1014,6 +1018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: YellowToken
       objectReference: {fileID: 0}
+    - target: {fileID: 8926189408010507755, guid: dcfcfbd0831542645a7b848d53a9aae3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcfcfbd0831542645a7b848d53a9aae3, type: 3}
 --- !u!1001 &9009867370638331692
@@ -1082,6 +1090,10 @@ PrefabInstance:
     - target: {fileID: 9009867371595745727, guid: 91c9cdbcd74645542840bb4ea4a526df, type: 3}
       propertyPath: m_Name
       value: RedToken
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009867371595745727, guid: 91c9cdbcd74645542840bb4ea4a526df, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c9cdbcd74645542840bb4ea4a526df, type: 3}

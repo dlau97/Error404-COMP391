@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1008537278575821874}
   - component: {fileID: 1008537278575821868}
   - component: {fileID: 1008537278575821875}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: BlueToken
   m_TagString: Untagged
   m_Icon: {fileID: 0}

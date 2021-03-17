@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
 				playerColour = Colour.blue;
 				this.gameObject.layer = 7; //blue
 				GameObject.Find("GroundCheck").layer = 7;
+				Debug.Log("Player changed to blue");
 				break;
 			case "Red":
 				playerSR.color = new Color(1f, 0, 0f, 1f); //Red
