@@ -5,46 +5,52 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     
-   public GameObject Player;
-   public GameObject Ground;
-   public GameObject PlayerBullet;
-   public void Dead()
-   {
-       Destroy(gameObject);
-   }
+   private GameObject Player;
+   private SpriteRenderer enemySR;
+
+   private BoxCollider2D enemyCollider;
+ 
+
    
-   
+    void Start()
+    {
+       Player = GameObject.FindGameObjectWithTag ("Player");
+       enemySR = this.gameObject.GetComponent<SpriteRenderer>();
+       enemyCollider = this.gameObject.GetComponent<BoxCollider2D>();
+       enemySR.enabled = true;
+       enemyCollider.enabled = true;
+    }
     
-   void Awake()
+    public void EnableEnemy()
    {
-      Player = GameObject.FindGameObjectWithTag ("Player");
-      Ground = GameObject.FindGameObjectWithTag ("Ground");
-      PlayerBullet = GameObject.FindGameObjectWithTag ("PlayerBullet");
-
-
+       enemySR.enabled = true;
+       enemyCollider.enabled = true;
    }
+    public void DisableEnemy()
+   {
+       enemySR.enabled = false;
+       enemyCollider.enabled = false;
+   }
+
+
    void OnTriggerEnter2D(Collider2D other)
    {
-       if (other.gameObject == Player)
+       if (other.gameObject.tag == "Player")
        {
-        Destroy(other.gameObject);
+           other.gameObject.SendMessage("RespawnPlayer");
        } 
        if (other.CompareTag ("PlayerBullet"))
        {
-        Dead();
+        DisableEnemy();
        }
    }
   
 
   
-  
    
     // Start is called before the first frame update
     
-    void Start()
-    {
-       
-    }
+
 
  
     // Update is called once per frame

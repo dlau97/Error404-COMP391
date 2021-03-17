@@ -59,6 +59,7 @@ public class MovingPlatform : MonoBehaviour
         if(other.gameObject.tag == "Player"){
             GameObject player = other.gameObject;
             player.transform.SetParent(null);
+            player.transform.localScale = new Vector3(1,1,1);
         }
     }
 }

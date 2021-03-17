@@ -133,8 +133,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2032921907
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -216,4 +216,4 @@ MonoBehaviour:
   bluePlayerBullet: {fileID: 535749345723415172, guid: edddbf1d0c9e8fa45b13d2aaf09f675d, type: 3}
   redPlayerBullet: {fileID: 535749345723415172, guid: be09b169b6e8d274792d441d64873f0a, type: 3}
   yellowPlayerBullet: {fileID: 535749345723415172, guid: 244a999cdaa9b8048949eaec9d2e273b, type: 3}
-  shootSpeed: 15
+  shootSpeed: 16

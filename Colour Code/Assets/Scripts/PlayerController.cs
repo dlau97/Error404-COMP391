@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 	public GameObject bluePlayerBullet, redPlayerBullet, yellowPlayerBullet;
 	public float shootSpeed = 10f;
 	private bool canJump = true;
-	private bool canShoot = true;
+	private bool canShoot = false;
 	private Rigidbody2D playerRB;
 	private Transform playerT;
 	private SpriteRenderer playerSR;
@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
  		playerColour = Colour.neutral;
 		this.gameObject.layer = 3; //white
 		direction = 1; //Start facing right
+		canShoot = false;
 	}
 
     // Update is called once per frame
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
 		checkJump();
 		checkRotation();
 		checkShooting();
+		
     }
 
 	public string getColour(){
@@ -77,7 +79,13 @@ public class PlayerController : MonoBehaviour
 	void checkRotation(){
 		transform.rotation = Quaternion.Euler(0, 0, 0);
 	}
+	public void EnableShooting(){
+		canShoot = true;
+	}
 
+	public void disableShooting(){
+		canShoot = false;
+	}
 
 	public void EnableJump(){
 		canJump = true;
@@ -171,6 +179,11 @@ public class PlayerController : MonoBehaviour
 			token.SendMessage("ResetToken");
 		}
 
+		GameObject [] allEnemies  = GameObject.FindGameObjectsWithTag("Enemy");
+
+		foreach(GameObject enemy in allEnemies){
+			enemy.SendMessage("EnableEnemy");
+		}
 
 	}
 }
