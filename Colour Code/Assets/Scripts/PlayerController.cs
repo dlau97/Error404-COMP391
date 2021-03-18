@@ -110,21 +110,21 @@ public class PlayerController : MonoBehaviour
 			case "Blue":
 				playerSR.color = new Color(0, 0, 1f, 1f); //Blue
 				playerColour = Colour.blue;
-				this.gameObject.layer = 7; //blue
-				GameObject.Find("GroundCheck").layer = 7;
+				this.gameObject.layer = 14; //blue
+				GameObject.Find("GroundCheck").layer = 14;
 				Debug.Log("Player changed to blue");
 				break;
 			case "Red":
 				playerSR.color = new Color(1f, 0, 0f, 1f); //Red
 				playerColour = Colour.red;
-				this.gameObject.layer = 8; //red
-				GameObject.Find("GroundCheck").layer = 8;
+				this.gameObject.layer = 15; //red
+				GameObject.Find("GroundCheck").layer = 15;
 				break;
 			case "Yellow":
 				playerSR.color = new Color(1f, 1f, 0f, 1f); //Blue
 				playerColour = Colour.yellow;
-				this.gameObject.layer = 9; //yellow
-				GameObject.Find("GroundCheck").layer = 9;
+				this.gameObject.layer = 16; //yellow
+				GameObject.Find("GroundCheck").layer = 16;
 				break;
 			default:
 				Debug.Log("Incorrect colour option - This should never appear.");
