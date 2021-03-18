@@ -9,15 +9,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3021762966863886312, guid: 3231dd214d876934f8749d208cfe7f71, type: 3}
       propertyPath: m_Color.b
-      value: 0.037379846
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3021762966863886312, guid: 3231dd214d876934f8749d208cfe7f71, type: 3}
       propertyPath: m_Color.g
-      value: 0.08255672
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3021762966863886312, guid: 3231dd214d876934f8749d208cfe7f71, type: 3}
       propertyPath: m_Color.r
-      value: 0.5283019
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021762966863886312, guid: 3231dd214d876934f8749d208cfe7f71, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021762966863886312, guid: 3231dd214d876934f8749d208cfe7f71, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2032921907
       objectReference: {fileID: 0}
     - target: {fileID: 3950110409466329325, guid: 3231dd214d876934f8749d208cfe7f71, type: 3}
       propertyPath: m_Name
