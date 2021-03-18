@@ -18,6 +18,9 @@ public class EndGameSceneController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        SceneManager.LoadScene("Main Menu");
+        if(other.gameObject.tag == "Player"){
+            SceneManager.LoadScene("Main Menu");
+        }
+        
     }
 }
