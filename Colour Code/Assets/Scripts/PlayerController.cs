@@ -68,10 +68,10 @@ public class PlayerController : MonoBehaviour
 		this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0);
 	}
 	void checkDirection(){
-		if(Input.GetKeyDown(KeyCode.A)){
+		if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
 			direction  = -1;
 		}
-		else if (Input.GetKeyDown(KeyCode.D)){
+		else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
 			direction = 1;
 		}
 	}
