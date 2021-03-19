@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2553245434388516436}
   - component: {fileID: 2553245434388516437}
   - component: {fileID: 2553245434388516442}
+  - component: {fileID: 8491512672239113888}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -44,27 +45,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec515c98873bca49be457f94dfdfcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeIntensity: 0.5
+  shakeIntensity: 0.2
   decreaseFactor:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      time: 0.004166667
+      value: 0.99905735
+      inSlope: -0.6263608
+      outSlope: -0.6263608
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.37894976
+      value: 0.7643079
+      inSlope: -1.4316602
+      outSlope: -1.4316602
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.513593
+      value: 0.4631164
+      inSlope: -2.6168008
+      outSlope: -2.6168008
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5943807
+      value: 0.2210247
+      inSlope: -1.054495
+      outSlope: -1.054495
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.26083273
+    - serializedVersion: 3
+      time: 0.9833374
+      value: 0.008010864
+      inSlope: -0.54765433
+      outSlope: -0.54765433
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -80,5 +108,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a22761340492ee45b0521a4ed998983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8491512672239113888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2553245434388516439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272d1bfabc0434b4eb939773ed72c52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

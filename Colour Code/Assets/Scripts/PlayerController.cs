@@ -185,6 +185,6 @@ public class PlayerController : MonoBehaviour
 			enemy.SendMessage("EnableEnemy");
 		}
 
-		GameObject.Find("GameController").SendMessage("ShakeScreen", 0.25f);
+		GameObject.Find("GameController").SendMessage("ShakeScreen", 0.3f);
 	}
 }
