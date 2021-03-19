@@ -10,6 +10,8 @@ public class CameraController : MonoBehaviour
 
     public int heightIncrease = 5;
 
+
+
 	// Use this for initialization
 	void Start () {
 		
