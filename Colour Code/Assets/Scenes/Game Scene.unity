@@ -3724,7 +3724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8479574481094759333, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4647634
+      value: 1.8796413
       objectReference: {fileID: 0}
     - target: {fileID: 8479574481094759333, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
       propertyPath: m_LocalScale.y
@@ -3732,7 +3732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8479574481094759333, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 95.591
+      value: 95.53
       objectReference: {fileID: 0}
     - target: {fileID: 8479574481094759333, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9798,6 +9798,18 @@ PrefabInstance:
       propertyPath: playerT
       value: 
       objectReference: {fileID: 1519174596}
+    - target: {fileID: 7367069795158571213, guid: f408211bb4dc3c04e9a33df6e5a37b12, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367069795158571213, guid: f408211bb4dc3c04e9a33df6e5a37b12, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367069795158571213, guid: f408211bb4dc3c04e9a33df6e5a37b12, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.3773585
+      objectReference: {fileID: 0}
     - target: {fileID: 7367069795158571214, guid: f408211bb4dc3c04e9a33df6e5a37b12, type: 3}
       propertyPath: m_Name
       value: Main Camera
