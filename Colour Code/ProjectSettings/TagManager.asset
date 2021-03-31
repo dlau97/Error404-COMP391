@@ -11,6 +11,7 @@ TagManager:
   - KillFloor
   - Moving Platform
   - Gun
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
