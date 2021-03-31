@@ -46,7 +46,7 @@ public class PushPullController : MonoBehaviour
                     holding = false;
                     GameObject player = GameObject.Find("Player");
                     this.transform.SetParent(null);
-                    this.transform.localScale = new Vector3(1,1,1);
+                    //this.transform.localScale = new Vector3(1,1,1);
                     player.SendMessage("DisableHolding");
                     Debug.Log("No Longer holding");
                     holdingDelayEnabled = true;
