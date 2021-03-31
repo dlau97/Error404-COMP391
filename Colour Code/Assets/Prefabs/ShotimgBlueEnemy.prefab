@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-511784650136500190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2478895023992385557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfee6377d24771b459947582e75171ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyBullet: {fileID: 8739498608855702255, guid: 91ce9f304a1948d4692bfb895f5e5fa3, type: 3}
-  WaitForSeconds: 7
 --- !u!1001 &4834305455679535816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35,11 +21,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2354333755071091517, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.68
+      value: 17.990454
       objectReference: {fileID: 0}
     - target: {fileID: 2354333755071091517, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.48
+      value: -1.4483943
       objectReference: {fileID: 0}
     - target: {fileID: 2354333755071091517, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -75,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021158896761719517, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
       propertyPath: m_Name
-      value: ShotimgBlueEnemy
+      value: BlueEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 7021158896761719517, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
       propertyPath: m_Layer
@@ -104,8 +90,3 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -5757540130340081761, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
---- !u!1 &2478895023992385557 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7021158896761719517, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
-  m_PrefabInstance: {fileID: 4834305455679535816}
-  m_PrefabAsset: {fileID: 0}

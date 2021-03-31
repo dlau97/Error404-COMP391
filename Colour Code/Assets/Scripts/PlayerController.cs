@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
 
 	public enum Colour {blue, red, yellow, neutral};
 	public float speed = 5f;
+	public float holdingSpeed = 2f;
+
+	private float initialSpeed = 5f;
 	public float jumpHeight = 5;
 	public Transform groundCheck;
 	public LayerMask groundLayer;
@@ -20,6 +23,7 @@ public class PlayerController : MonoBehaviour
 	private SpriteRenderer playerSR;
 	private int direction = 1; //Direction 1 = right, -1 = left;
 
+	private bool holding = false;
 
 
 
@@ -33,6 +37,7 @@ public class PlayerController : MonoBehaviour
 		this.gameObject.layer = 3; //white
 		direction = 1; //Start facing right
 		canShoot = false;
+		initialSpeed = speed;
 	}
 
     // Update is called once per frame
@@ -95,11 +100,21 @@ public class PlayerController : MonoBehaviour
 		canJump = false;
 	}
 
+	public void EnableHolding(){
+		holding = true;
+		speed = holdingSpeed;
+	}
+
+	public void DisableHolding(){
+		holding = false;
+		speed = initialSpeed;
+	}
+
 	void checkJump()
 	{
 		//canJump = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
 
-		if(Input.GetKeyDown(KeyCode.Space) && canJump == true){
+		if(Input.GetKeyDown(KeyCode.Space) && canJump == true && holding == false){
 			playerRB.AddForce(new Vector2(0,jumpHeight), ForceMode2D.Impulse);
 			canJump = false;
 		}
