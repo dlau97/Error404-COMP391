@@ -28,6 +28,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7308400659674769184, guid: 8c3bcf19bc9e97b4595b23ad4ecdc817, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7353474
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308400659674769184, guid: 8c3bcf19bc9e97b4595b23ad4ecdc817, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.1323263
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308400659674769184, guid: 8c3bcf19bc9e97b4595b23ad4ecdc817, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0053967834
+      objectReference: {fileID: 0}
     - target: {fileID: 8166627779363816964, guid: 8c3bcf19bc9e97b4595b23ad4ecdc817, type: 3}
       propertyPath: m_Name
       value: MoveYellowEnemy Variant 1
@@ -50,15 +62,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166627779363816970, guid: 8c3bcf19bc9e97b4595b23ad4ecdc817, type: 3}
       propertyPath: m_Color.b
-      value: 0.509434
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8166627779363816970, guid: 8c3bcf19bc9e97b4595b23ad4ecdc817, type: 3}
       propertyPath: m_Color.g
-      value: 0.08345103
+      value: 0.22655034
       objectReference: {fileID: 0}
     - target: {fileID: 8166627779363816970, guid: 8c3bcf19bc9e97b4595b23ad4ecdc817, type: 3}
       propertyPath: m_Color.r
-      value: 0.07929869
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166627779363816971, guid: 8c3bcf19bc9e97b4595b23ad4ecdc817, type: 3}
       propertyPath: m_RootOrder

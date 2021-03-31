@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8573788758303683344, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2322228084777920927, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
       propertyPath: Ground
       value: 
@@ -87,5 +91,6 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -2032921907
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8573788758303683344, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b983c67f02b138745aaf678eddb397f9, type: 3}

@@ -26,7 +26,7 @@ public class EnemyBullet : MonoBehaviour
     
     void Update()
     {
-       if(Time.time >= startTime + 15f)
+       if(Time.time >= startTime + 13f)
        {
            Destroy(this.gameObject);
        }
@@ -35,10 +35,15 @@ public class EnemyBullet : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
-            
+            other.SendMessage("RespawnPlayer");
+            Destroy(this.gameObject);      
         }
+
+        if (other.CompareTag ("PlayerBullet"))
+        {
+            Destroy(this.gameObject);
+        }
+        
         if(other.gameObject.tag == "Ground")
         {
             Destroy(this.gameObject);

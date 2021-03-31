@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8573788758303683344, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
+      propertyPath: EnemyBullet
+      value: 
+      objectReference: {fileID: 8739498608855702255, guid: 91ce9f304a1948d4692bfb895f5e5fa3, type: 3}
+    - target: {fileID: -8573788758303683344, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
+      propertyPath: WaitForSeconds
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2322228084777920927, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
       propertyPath: Ground
       value: 
@@ -61,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7021158896761719517, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
       propertyPath: m_Name
-      value: BlueEnemy
+      value: ShotimgBlueEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 7021158896761719517, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
       propertyPath: m_Layer

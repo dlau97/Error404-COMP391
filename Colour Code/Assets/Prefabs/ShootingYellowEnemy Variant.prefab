@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyBullet: {fileID: 8739498608855702255, guid: 81d534c639f94604b9dcc9b19eda149f, type: 3}
-  WaitForSeconds: 7
+  WaitForSeconds: 10
 --- !u!1001 &7395126187290618788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,6 +72,10 @@ PrefabInstance:
     - target: {fileID: 1839814778947366797, guid: 6fc4c9ac8c69f014380354d7d36732dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469983193413775424, guid: 6fc4c9ac8c69f014380354d7d36732dd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6364774886868317805, guid: 6fc4c9ac8c69f014380354d7d36732dd, type: 3}
       propertyPath: m_Name
