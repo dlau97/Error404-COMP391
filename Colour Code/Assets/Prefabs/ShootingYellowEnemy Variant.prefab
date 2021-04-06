@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &926028443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4536529036565388745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfee6377d24771b459947582e75171ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyBullet: {fileID: 8739498608855702255, guid: 81d534c639f94604b9dcc9b19eda149f, type: 3}
-  WaitForSeconds: 10
 --- !u!1001 &7395126187290618788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85,8 +71,3 @@ PrefabInstance:
     - {fileID: 204687799525150298, guid: 6fc4c9ac8c69f014380354d7d36732dd, type: 3}
     - {fileID: 665697224077300527, guid: 6fc4c9ac8c69f014380354d7d36732dd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6fc4c9ac8c69f014380354d7d36732dd, type: 3}
---- !u!1 &4536529036565388745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6364774886868317805, guid: 6fc4c9ac8c69f014380354d7d36732dd, type: 3}
-  m_PrefabInstance: {fileID: 7395126187290618788}
-  m_PrefabAsset: {fileID: 0}
