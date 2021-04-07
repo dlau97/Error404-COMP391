@@ -729,6 +729,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8479574481094759334, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479574481094759334, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479574481094759334, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8479574481094759352, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
       propertyPath: m_Name
       value: red block (1)
@@ -1046,6 +1058,18 @@ PrefabInstance:
     - target: {fileID: 8479574481094759333, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479574481094759334, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479574481094759334, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479574481094759334, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8479574481094759352, guid: 3416a832f4b161b4abe5dc0fb774dcd5, type: 3}
       propertyPath: m_Name
@@ -2314,6 +2338,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6911053100266209361, guid: ba70f3d4a6c213b449ea62dcf6640f40, type: 3}
   m_PrefabInstance: {fileID: 482010843}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &408146166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 408146169}
+  - component: {fileID: 408146168}
+  - component: {fileID: 408146167}
+  m_Layer: 17
+  m_Name: Glow Post Processor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &408146167
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408146166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &408146168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408146166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: b0f4471de05773c4fa2b745f26dc3961, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!4 &408146169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408146166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 246, y: 0, z: -8.47}
+  m_LocalScale: {x: 1000, y: 18.74, z: 10}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &413996905
 GameObject:
   m_ObjectHideFlags: 0
@@ -12956,6 +13042,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1138197655171036856, guid: f408211bb4dc3c04e9a33df6e5a37b12, type: 3}
+      propertyPath: volumeLayer.m_Bits
+      value: 131328
+      objectReference: {fileID: 0}
     - target: {fileID: 7367069795158571058, guid: f408211bb4dc3c04e9a33df6e5a37b12, type: 3}
       propertyPath: m_RootOrder
       value: 2
