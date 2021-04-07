@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4375338130815322553, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f477b19285dc1be4a96ebd35b9739529, type: 2}
     - target: {fileID: 7021158896761719517, guid: b983c67f02b138745aaf678eddb397f9, type: 3}
       propertyPath: m_Name
       value: BlueEnemy

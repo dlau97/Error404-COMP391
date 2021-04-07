@@ -22,6 +22,7 @@ public class LaunchpadController : MonoBehaviour
             objRB.velocity = Vector3.zero;
             objRB.AddForce(new Vector2(0f, LaunchStrength), ForceMode2D.Impulse);
             this.transform.eulerAngles = Vector3.zero;
+			GameObject.Find("GameController").SendMessage("PlayLaunchPadSFX");
         }
 
 	}

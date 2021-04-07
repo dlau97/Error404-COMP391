@@ -208,6 +208,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   holdingSpeed: 3
+  blueMat: {fileID: 0}
+  redMat: {fileID: 0}
+  yellowMat: {fileID: 0}
   jumpHeight: 20
   groundCheck: {fileID: 6190506902314480612}
   groundLayer:

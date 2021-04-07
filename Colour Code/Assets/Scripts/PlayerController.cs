@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 	public float speed = 5f;
 	public float holdingSpeed = 2f;
 
+	public Material blueMat, redMat, yellowMat;
 	private float initialSpeed = 5f;
 	public float jumpHeight = 5;
 	public Transform groundCheck;
@@ -25,7 +26,9 @@ public class PlayerController : MonoBehaviour
 
 	private bool holding = false;
 
+	private TrailRenderer playerTR;
 
+	private GameObject soundController;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,8 @@ public class PlayerController : MonoBehaviour
 		direction = 1; //Start facing right
 		canShoot = false;
 		initialSpeed = speed;
+		playerTR = this.gameObject.GetComponent<TrailRenderer>();
+		soundController = GameObject.Find("GameController");
 	}
 
     // Update is called once per frame
@@ -116,14 +121,18 @@ public class PlayerController : MonoBehaviour
 
 		if(Input.GetKeyDown(KeyCode.Space) && canJump == true && holding == false){
 			playerRB.AddForce(new Vector2(0,jumpHeight), ForceMode2D.Impulse);
+			soundController.SendMessage("PlayJumpSFX");
 			canJump = false;
 		}
 	}
 
 	public void ChangeColour(string colour){
+		soundController.SendMessage("PlayColourChangeSFX");
 		switch(colour){
 			case "Blue":
 				playerSR.color = new Color(0, 0, 1f, 1f); //Blue
+				playerSR.material = blueMat;
+				playerTR.material = blueMat;
 				playerColour = Colour.blue;
 				this.gameObject.layer = 14; //blue
 				GameObject.Find("GroundCheck").layer = 14;
@@ -131,13 +140,17 @@ public class PlayerController : MonoBehaviour
 				break;
 			case "Red":
 				playerSR.color = new Color(1f, 0, 0f, 1f); //Red
+				playerSR.material = redMat;
+				playerTR.material = redMat;
 				playerColour = Colour.red;
 				this.gameObject.layer = 15; //red
 				GameObject.Find("GroundCheck").layer = 15;
 				Debug.Log("Player changed to red");
 				break;
 			case "Yellow":
-				playerSR.color = new Color(1f, 1f, 0f, 1f); //Blue
+				playerSR.color = new Color(1f, 1f, 0f, 1f); //Yellow
+				playerSR.material = yellowMat;
+				playerTR.material = yellowMat;
 				playerColour = Colour.yellow;
 				this.gameObject.layer = 16; //yellow
 				GameObject.Find("GroundCheck").layer = 16;
@@ -175,18 +188,24 @@ public class PlayerController : MonoBehaviour
 				default:
 					Debug.Log("You should not be default colour while shooting - you should never see this message");
 					break;
-		}
+			}
+			soundController.SendMessage("PlayShootSFX");
 		}
 	}
 
 	public void RespawnPlayer(){
+		playerTR.enabled = false;
 		Vector3 checkpointPos = GameObject.Find("GameController").GetComponent<RespawnController>().getCheckpointPos();
 		string lastColour = GameObject.Find("GameController").GetComponent<RespawnController>().getLastColour();
 
 		ChangeColour(lastColour);
 
+		
 		playerRB.velocity = Vector2.zero;
 		playerT.position = checkpointPos;
+		
+
+		soundController.SendMessage("PlayDeathSFX");
 
 		playerT.localScale = new Vector3(1,1,1);
 
@@ -207,7 +226,15 @@ public class PlayerController : MonoBehaviour
 		foreach(GameObject ppObj in allPushPullObjs){
 			ppObj.SendMessage("ResetObj");
 		}
-
+		
 		GameObject.Find("GameController").SendMessage("ShakeScreen", 0.3f);
+		playerTR.enabled = true;
+	}
+
+	private void OnCollisionEnter2D(Collision2D other) {
+		if(other.gameObject.tag == "Ground" || other.gameObject.tag == "PushPull" || other.gameObject.tag == "Moving Platform"){
+            GameObject.Find("GameController").SendMessage("PlayCollisionSFX");
+           // Debug.Log("Can jump");
+        }
 	}
 }

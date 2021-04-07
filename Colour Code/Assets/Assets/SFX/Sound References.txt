@@ -17,3 +17,7 @@ Reload - http://freesound.org/people/SpliceSound/sounds/153560/ - SpliceSound - 
 Enemy Hit Sound - https://freesound.org/people/jeckkech/sounds/391660/ - jeckkech - Public Domain Dedicated
 
 Lose Sound - https://freesound.org/people/LittleRobotSoundFactory/sounds/270334/ - LittleRobotSoundFactory - Attribution 3.0 Licence
+
+Overworld Kevin MacLeod (incompetech.com) - Licensed under Creative Commons: By Attribution 3.0 License - http://creativecommons.org/licenses/by/3.0/
+
+Colour Change Pickup - https://freesound.org/people/jalastram/sounds/317684/ - jalastram - By Attribution 3.0 License

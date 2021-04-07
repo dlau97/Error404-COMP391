@@ -41,7 +41,8 @@ public class Enemy : MonoBehaviour
        } 
        if (other.CompareTag ("PlayerBullet"))
        {
-        DisableEnemy();
+            DisableEnemy();
+            GameObject.Find("GameController").SendMessage("PlayEnemyHitSFX");
        }
    }
   

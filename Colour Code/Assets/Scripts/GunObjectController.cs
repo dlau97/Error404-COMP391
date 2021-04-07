@@ -19,6 +19,7 @@ public class GunObjectController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player"){
             other.gameObject.SendMessage("EnableShooting");
+            GameObject.Find("GameController").SendMessage("PlayGunCollectSFX");
             Destroy(this.gameObject);
         }
     }
