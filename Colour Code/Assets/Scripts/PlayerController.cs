@@ -134,12 +134,14 @@ public class PlayerController : MonoBehaviour
 				playerColour = Colour.red;
 				this.gameObject.layer = 15; //red
 				GameObject.Find("GroundCheck").layer = 15;
+				Debug.Log("Player changed to red");
 				break;
 			case "Yellow":
 				playerSR.color = new Color(1f, 1f, 0f, 1f); //Blue
 				playerColour = Colour.yellow;
 				this.gameObject.layer = 16; //yellow
 				GameObject.Find("GroundCheck").layer = 16;
+				Debug.Log("Player changed to yellow");
 				break;
 			default:
 				Debug.Log("Incorrect colour option - This should never appear.");
@@ -198,6 +200,12 @@ public class PlayerController : MonoBehaviour
 
 		foreach(GameObject enemy in allEnemies){
 			enemy.SendMessage("EnableEnemy");
+		}
+
+		GameObject [] allPushPullObjs = GameObject.FindGameObjectsWithTag("PushPull");
+
+		foreach(GameObject ppObj in allPushPullObjs){
+			ppObj.SendMessage("ResetObj");
 		}
 
 		GameObject.Find("GameController").SendMessage("ShakeScreen", 0.3f);

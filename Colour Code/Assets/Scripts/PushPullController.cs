@@ -11,6 +11,8 @@ public class PushPullController : MonoBehaviour
 
     private float delayHoldingTime = 0.5f;
 
+    private Vector3 initialPos;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class PushPullController : MonoBehaviour
         holdingDelayEnabled = false;
         startTime = Time.time;
         canHold = false;
+        initialPos = this.transform.position;
     }
 
     // Update is called once per frame
@@ -41,6 +44,7 @@ public class PushPullController : MonoBehaviour
                     holdingDelayEnabled = true;
                     startTime = Time.time;
                     Debug.Log("Holding delay enabled = " + holdingDelayEnabled);
+                    //this.gameObject.GetComponent<Rigidbody2D>().simulated = false;
                 }
                 else if(holding == true){
                     holding = false;
@@ -51,7 +55,7 @@ public class PushPullController : MonoBehaviour
                     Debug.Log("No Longer holding");
                     holdingDelayEnabled = true;
                     startTime = Time.time;
-
+                    //this.gameObject.GetComponent<Rigidbody2D>().simulated = true;
                     Debug.Log("Holding delay enabled = " + holdingDelayEnabled);
                 }
             }
@@ -59,8 +63,8 @@ public class PushPullController : MonoBehaviour
 
     }
 
-    private void LateUpdate() {
-
+    public void ResetObj(){
+        this.transform.position = initialPos;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -78,6 +82,18 @@ public class PushPullController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         if(other.gameObject.tag == "Player"){
             canHold = false;
+            if(holding == true){
+                holding = false;
+                GameObject player = GameObject.Find("Player");
+                this.transform.SetParent(null);
+                //this.transform.localScale = new Vector3(1,1,1);
+                player.SendMessage("DisableHolding");
+                Debug.Log("No Longer holding");
+                holdingDelayEnabled = true;
+                startTime = Time.time;
+                //this.gameObject.GetComponent<Rigidbody2D>().simulated = true;
+                Debug.Log("Holding delay enabled = " + holdingDelayEnabled);
+            }
         }
     }
 

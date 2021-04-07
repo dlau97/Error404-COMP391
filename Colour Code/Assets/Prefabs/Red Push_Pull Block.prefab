@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8586609862738812163}
   m_Layer: 8
   m_Name: Red Push_Pull Block
-  m_TagString: Ground
+  m_TagString: PushPull
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

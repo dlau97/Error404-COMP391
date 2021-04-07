@@ -12,6 +12,7 @@ TagManager:
   - Moving Platform
   - Gun
   - EnemyBullet
+  - PushPull
   layers:
   - Default
   - TransparentFX

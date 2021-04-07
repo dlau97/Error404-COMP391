@@ -22,7 +22,9 @@ public class RespawnController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.R)){
+            player.SendMessage("RespawnPlayer");
+        }
     }
 
     public void setCheckpoint(Vector3 pos){
