@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 	public Transform groundCheck;
 	public LayerMask groundLayer;
 	public Colour playerColour = Colour.neutral;
-	public GameObject bluePlayerBullet, redPlayerBullet, yellowPlayerBullet;
+	public GameObject bluePlayerBullet, redPlayerBullet, yellowPlayerBullet, deathFX;
 	public float shootSpeed = 10f;
 	private bool canJump = true;
 	private bool canShoot = false;
@@ -194,6 +194,8 @@ public class PlayerController : MonoBehaviour
 	}
 
 	public void RespawnPlayer(){
+		GameObject deathParticleFX = Instantiate(deathFX, this.transform.position, Quaternion.identity);
+		Destroy(deathParticleFX, 1f);
 		playerTR.enabled = false;
 		Vector3 checkpointPos = GameObject.Find("GameController").GetComponent<RespawnController>().getCheckpointPos();
 		string lastColour = GameObject.Find("GameController").GetComponent<RespawnController>().getLastColour();

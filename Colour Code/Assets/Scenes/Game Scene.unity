@@ -13694,6 +13694,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 67f3abb52d0a19545bbfc02d8b71a19f, type: 2}
     - target: {fileID: 6190506903928917685, guid: 1a4f60f16a3e84c49a5b4882598c9977, type: 3}
+      propertyPath: deathFX
+      value: 
+      objectReference: {fileID: 1807268410309246338, guid: 6157f993162661e41842f99f5629e0fd, type: 3}
+    - target: {fileID: 6190506903928917685, guid: 1a4f60f16a3e84c49a5b4882598c9977, type: 3}
       propertyPath: yellowMat
       value: 
       objectReference: {fileID: 2100000, guid: 1c0078b115b797b4d8499d1322570940, type: 2}
@@ -13710,6 +13714,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6353558730246988800, guid: e455294b1b5542f4388ce57179a2a8db, type: 3}
+      propertyPath: m_Size.y
+      value: 2.257681
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353558730246988800, guid: e455294b1b5542f4388ce57179a2a8db, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.62884045
+      objectReference: {fileID: 0}
     - target: {fileID: 6353558730246988801, guid: e455294b1b5542f4388ce57179a2a8db, type: 3}
       propertyPath: m_RootOrder
       value: 5
