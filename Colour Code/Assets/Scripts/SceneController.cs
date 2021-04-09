@@ -8,7 +8,10 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GameObject.Find("HighscoreController") != null)
+        {
+            GameObject.Find("HighscoreController").SendMessage("StartTimer");
+        }
     }
 
     // Update is called once per frame

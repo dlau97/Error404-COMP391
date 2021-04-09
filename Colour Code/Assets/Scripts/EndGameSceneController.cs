@@ -19,6 +19,10 @@ public class EndGameSceneController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player"){
+            if (GameObject.Find("HighscoreController") != null)
+            {
+                GameObject.Find("HighscoreController").SendMessage("EndTimer");
+            }
             SceneManager.LoadScene("Main Menu");
         }
         
