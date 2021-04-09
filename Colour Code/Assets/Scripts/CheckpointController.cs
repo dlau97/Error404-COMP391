@@ -20,7 +20,7 @@ public class CheckpointController : MonoBehaviour
     {
         
     }
-        private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player" && checkpointReached == false){
             checkpointReached = true;
             GameObject.Find("GameController").SendMessage("setCheckpoint", this.gameObject.transform.position);

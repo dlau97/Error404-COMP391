@@ -14,8 +14,20 @@ public class HighscoreController : MonoBehaviour
     // Start is called before the first frame update
     private void Awake() {
         DontDestroyOnLoad(transform.gameObject);
+
+        int numHighscoreControllers = FindObjectsOfType<HighscoreController>().Length;
+            if (numHighscoreControllers != 1)
+            {
+                Destroy(this.gameObject);
+            }
+            // if more then one music player is in the scene
+            //destroy ourselves
+            else
+            {
+                DontDestroyOnLoad(gameObject);
+            }
     }
-        void Start()
+    void Start()
     {
         bestTime = PlayerPrefs.GetFloat(bestTimeKey, 9999.99f);
         //bestTime = 2.6537463842f;

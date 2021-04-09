@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    void Awake() {
+        if (GameObject.Find("HighscoreController") != null)
+        {
+            GameObject.Find("HighscoreController").SendMessage("StartTimer");
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
